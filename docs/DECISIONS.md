@@ -1,6 +1,6 @@
 # Decisions and rationale
 
-## 2026-10-15 — Scope agreed with Ben
+## 2026-10-15 — Product scope
 
 The original friction was sending many package photos into ChatGPT and hitting attachment limits. The app only needs to convey enough ingredient information for a useful conversation; humans fill gaps.
 

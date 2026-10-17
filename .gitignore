@@ -7,3 +7,21 @@ local.properties
 *.jks
 *.keystore
 captures/
+
+# Machine/device state and diagnostic artifacts. See README privacy guidance.
+/.local/
+*.local.properties
+/.env
+/.env.*
+!/.env.example
+/key.properties
+/keystore.properties
+/signing.properties
+/secrets.properties
+*.p12
+*.pfx
+*.pem
+*.key
+adbkey
+adbkey.pub
+adb_known_hosts.pb

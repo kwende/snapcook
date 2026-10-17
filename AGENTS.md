@@ -34,3 +34,11 @@ Run `./gradlew :app:testDebugUnitTest :app:lintDebug :app:assembleDebug` (Window
 Focus tests on barcode normalization/deduplication, text export, persistence behavior, and backup round-trip/invalid-input atomicity. Device-check scan, keyboard, rotation, process recreation, clipboard, and document export/import. See HANDOFF acceptance criteria.
 
 Update README status and HANDOFF after each meaningful milestone. Explain what changed, why, what was verified, and what remains. Keep dependency versions pinned and do not commit SDK paths, credentials, release signing keys, build output, or personal backups.
+
+## Public repository / private workstation boundary
+
+Treat tracked files and commit messages as public. Keep documentation reproducible with placeholders: no phone serials/ADB GUIDs, LAN addresses, pairing codes, machine usernames/absolute SDK paths, personal food records, or unredacted device output. Pixel 9 and Android/API versions are public compatibility facts, not device identifiers.
+
+Use ignored `local.properties` for Android SDK selection and ignored `.local/` for optional device configuration, logs, screenshots, database copies, and personal backup files. Prefer discovering the current ADB device over saving its identifier. A local device settings file, if needed, belongs at `.local/device.properties`; it is not loaded by the app or build automatically. Do not add private configuration as app assets or resources.
+
+Never persist wireless pairing codes, even in ignored files; enter them interactively for the current session. Let ADB manage pairing keys in its normal per-user directory outside this repository. Read local settings only as needed and avoid echoing secrets into command output. Share only redacted, relevant diagnostic excerpts. Never use `git add -f` for private files. Gitignore does not protect already-tracked files, erase history, encrypt files, or remove chat/tool transcripts. Inspect staged changes before committing; if private data was committed, stop and report the exposure before considering credential rotation or history changes.
