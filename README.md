@@ -75,7 +75,11 @@ Keep source, synthetic test fixtures, and generic setup instructions in Git. Kee
 
 The `.local/` directory is optional and is not read by the application or Gradle. It is a workspace convention for private development files. Do not place private files in app assets/resources: packaging them would expose them in the APK regardless of Git ignore rules. Example commands and documentation use placeholders rather than real addresses, serials, or pairing codes. Device model and Android/API version may be recorded as compatibility evidence.
 
-Ignore rules prevent ordinary accidental staging; they do not encrypt local files, protect forced additions, remove tracked content/history, or erase chat/tool transcripts. Review `git diff --cached` before publishing. Treat raw logs and screenshots as potentially personal. The repository currently has no license file; an explicit license choice is still needed for open-source distribution.
+Ignore rules prevent ordinary accidental staging; they do not encrypt local files, protect forced additions, remove tracked content/history, or erase chat/tool transcripts. Review `git diff --cached` before publishing. Treat raw logs and screenshots as potentially personal.
+
+## License
+
+SnapCook is available under the [MIT License](LICENSE).
 
 ## References
 

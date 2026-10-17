@@ -67,6 +67,6 @@ After pairing, mDNS discovered and connected the device automatically. If discov
 
 ## Public repository hygiene (2026-10-16)
 
-Tracked files and available local Git history were checked for the actual device endpoint, serial/GUID, pairing codes, private-key markers, and workstation SDK path; none were found. Owner-name references were removed from current prose. Historical prose/commit author metadata was not rewritten. No license file exists yet; license selection remains before open-source distribution.
+Tracked files and available local Git history were checked for the actual device endpoint, serial/GUID, pairing codes, private-key markers, and workstation SDK path; none were found. Owner-name references were removed from current prose. Historical prose/commit author metadata was not rewritten. The project is licensed under MIT; see the root LICENSE file.
 
 Private development files belong in ignored `.local/`; SDK selection remains in ignored `local.properties`. See the README data-location table and AGENTS privacy rules. Pairing codes must never be saved, and ADB manages persistent pairing credentials outside the checkout. Public device evidence records only model, Android/API version, and test outcome. Gitignore cannot remove the pairing codes/endpoints already shared in the chat/tool transcript.
